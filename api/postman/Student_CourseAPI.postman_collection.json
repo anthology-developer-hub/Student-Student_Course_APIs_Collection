@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "0ee9f37f-2501-4fd3-bf78-70c10c11537d",
+		"name": "Student_CourseAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26523921"
+	},
+	"item": [
+		{
+			"name": "GetStudentCourse",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{Username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"payload\": {\r\n    \"id\": 6\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sisclientweb-700031.campusnexus.cloud/api/commands/Academics/Course/get",
+					"protocol": "https",
+					"host": [
+						"sisclientweb-700031",
+						"campusnexus",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"commands",
+						"Academics",
+						"Course",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCouurse",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{Username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sisclientweb-700031.campusnexus.cloud/api/commands/Academics/Course/create",
+					"protocol": "https",
+					"host": [
+						"sisclientweb-700031",
+						"campusnexus",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"commands",
+						"Academics",
+						"Course",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCourseAttributes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{Username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"payload\": {\r\n    \"courseId\": 4\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sisclientweb-700031.campusnexus.cloud/api/commands/Academics/Course/getCourseAttributes",
+					"protocol": "https",
+					"host": [
+						"sisclientweb-700031",
+						"campusnexus",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"commands",
+						"Academics",
+						"Course",
+						"getCourseAttributes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCoursePrerequisites",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{Username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"payload\": {\r\n    \"courseId\": 0,\r\n    \"isCorequisite\": true,\r\n    \"programVersionId\": 0,\r\n    \"catalogYearId\": 0,\r\n    \"courseCategoryId\": 0\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sisclientweb-700031.campusnexus.cloud/api/commands/Academics/Course/getCoursePrerequisites",
+					"protocol": "https",
+					"host": [
+						"sisclientweb-700031",
+						"campusnexus",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"commands",
+						"Academics",
+						"Course",
+						"getCoursePrerequisites"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Username",
+			"value": "your_student _env username",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "your_password",
+			"type": "string"
+		}
+	]
+}
